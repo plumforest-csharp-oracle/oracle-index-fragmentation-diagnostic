@@ -23,20 +23,12 @@ COLUMN flag format 9
 
 conn &sysuser./&syspass. as sysdba
 
-analyze INDEX CERT_&1..IX_TCM0006_01 validate structure;
+analyze INDEX &1..YOUR_INDEX_NAME validate structure;  -- ex: IX_TCM0006_01
 @①select_index_stats.sql &1.
-analyze INDEX CERT_&1..IX_TCM0006_02 validate structure;
-@①select_index_stats.sql &1.
-analyze INDEX CERT_&1..IX_TCM0006_03 validate structure;
-@①select_index_stats.sql &1.
-analyze INDEX CERT_&1..IX_TCM0006_04 validate structure;
-@①select_index_stats.sql &1.
-analyze INDEX CERT_&1..IX_TCM0006_05 validate structure;
-@①select_index_stats.sql &1.
-analyze INDEX CERT_&1..IX_TCM0034_01 validate structure;
-@①select_index_stats.sql &1.
-analyze INDEX CERT_&1..IX_TCM0034_02 validate structure;
-@①select_index_stats.sql &1.
+  
+-- 追加INDEX例:
+-- analyze INDEX &1..IX_TCM0006_02 validate structure;
+-- @select_index_stats.sql &1.
 
 spo off
 
