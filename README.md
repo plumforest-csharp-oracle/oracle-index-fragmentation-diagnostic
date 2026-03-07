@@ -10,7 +10,7 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
 - INDEX_STATS.sql (メイン: @..\設定ファイル\settings.sql → ANALYZE連打)
 - ①select_index_stats.sql (RATIO/FLAG計算SELECT)
    - INDEX_STATS.bat (ユーザがダブルクリックで起動。INDEX_STATS.sqlを呼び出す)
-- YYYYDDMM_hhmmss_XXXX_index_stats.csv (出力例)
+      YYYYDDMM_hhmmss_XXXX_index_stats.csv (出力例)
 
 
 設定ファイル/
