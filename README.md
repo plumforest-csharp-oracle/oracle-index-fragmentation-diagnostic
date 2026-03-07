@@ -31,4 +31,28 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
 
 Ex)↓  
 "SCHEMA","NAME","HEIGHT","LF_ROWS","DEL_LF_ROWS","RATIO","FLAG"  
-"YOUR_SCHEMA","YOUR_INDEX_NAME","2","37461","0","0.00","0"
+"YOUR_SCHEMA","YOUR_INDEX_NAME_01","2","37461","0","0.00","0"  
+"YOUR_SCHEMA","YOUR_INDEX_NAME_02","4","10000","2500","0.250","1"
+
+## 判定基準
+
+| 項目 | 閾値 | 対処 |
+|------|------|------|
+| RATIO | > 0.2 | ALTER INDEX REBUILD ONLINE |
+| HEIGHT | >= 4 | 肥大化注意 |
+| FLAG | 1 | 即再構築 |
+
+## 実務活用例
+[クエリ遅延発生]  
+1. INDEX_STATS.batを実行
+2. 出力結果CSVでFLAG=1のインデックス名を確認
+3. 対象のインデックスをDrop → Create でインデックスを再作成（インデックス再構築のSQLはまた作成します）
+
+[インデックス劣化の定期確認]
+- オラクルDBをインストールしているサーバー上の定期実行ジョブまたは、スケジュールを取り決めてからの直接バッチ実行。  
+- 手順は、クエリ遅延発生と同様
+
+## 特徴
+- **モジュール化**: settings.sql共有で複数スクリプト統一管理
+- **CSV出力**: Excelでフィルタ/グラフ化
+- **エラー安全**: WHENEVER SQLERRORでROLLBACK
