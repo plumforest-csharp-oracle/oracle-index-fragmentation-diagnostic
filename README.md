@@ -26,10 +26,9 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
    - 複数INDEXを同時に実行することも可能
 
 ## CSV診断結果確認
-バッチと同階層にcsvファイルが出力される。YYYYDDMM_hhmmss_YOUR_SCHEMA_index_stats.csv
+バッチと同階層にcsvファイルが出力される。YYYYDDMM_hhmmss_YOUR_SCHEMA_index_stats.csv　　
 一行目がヘッダー行で、2行目以降が、インデックス情報
 
 Ex)↓
-
-   "SCHEMA","NAME","HEIGHT","LF_ROWS","DEL_LF_ROWS","RATIO","FLAG"
-   "YOUR_SCHEMA","YOUR_INDEX_NAME","2","37461","0","0.00","0"
+"SCHEMA","NAME","HEIGHT","LF_ROWS","DEL_LF_ROWS","RATIO","FLAG"
+"YOUR_SCHEMA","YOUR_INDEX_NAME","2","37461","0","0.00","0"
