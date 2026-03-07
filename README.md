@@ -14,11 +14,11 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
 
 
 ## 実行手順
-1. **設定ファイル/settings.sql**編集
+1. **設定ファイル/settings.sql**編集 → **伏字を実際値に**
    - DEFINE sysuser=オラクルDBのシステムユーザ名
    - DEFINE syspass=オラクルDBのシステムユーザのパスワード
 
-2. **インデックス情報取得/INDEX_STATS.bat**編集
+2. **インデックス情報取得/INDEX_STATS.bat**編集 
    - 第一パラメータ：YOUR_SCHEMA を対象のスキーマ名に修正
   
 3. **インデックス情報取得/INDEX_STATS.sql**編集
