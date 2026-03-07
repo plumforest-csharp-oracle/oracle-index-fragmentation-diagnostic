@@ -4,10 +4,10 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
 ## フォルダ構成
 
 設定ファイル/
-└── settings.sql (共通変数定義: &sysuser &targetuser &v_now_time)
+- settings.sql (共通変数定義: &sysuser &targetuser &v_now_time)
 
 インデックス情報取得
-   - INDEX_STATS.sql (メイン: @..\設定ファイル\settings.sql → ANALYZE連打)
+- INDEX_STATS.sql (メイン: @..\設定ファイル\settings.sql → ANALYZE連打)
 ├── ①select_index_stats.sql (RATIO/FLAG計算SELECT)
 ├── INDEX_STATS.bat (ユーザがダブルクリックで起動。INDEX_STATS.sqlを呼び出す)
 └── YYYYDDMM_hhmmss_XXXX_index_stats.csv (出力例)
