@@ -27,6 +27,7 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
 
 ## CSV診断結果確認
 バッチと同階層にcsvファイルが出力される。YYYYDDMM_hhmmss_YOUR_SCHEMA_index_stats.csv
+一行目がヘッダー行で、2行目以降が、インデックス情報
 
 Ex)↓
 
