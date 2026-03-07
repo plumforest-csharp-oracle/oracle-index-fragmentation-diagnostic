@@ -25,7 +25,7 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
    - YOUR_INDEX_NAME を対象のインデックス名に変更
    - 複数INDEXを同時に実行することも可能
 
-##**CSV診断結果確認**
+## CSV診断結果確認
 バッチと同階層にcsvファイルが出力される。YYYYDDMM_hhmmss_YOUR_SCHEMA_index_stats.csv
 Ex)↓
 "SCHEMA","NAME","HEIGHT","LF_ROWS","DEL_LF_ROWS","RATIO","FLAG"
