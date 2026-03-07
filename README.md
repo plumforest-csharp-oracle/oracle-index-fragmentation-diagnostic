@@ -18,4 +18,5 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
    - DEFINE sysuser=オラクルDBのシステムユーザ名
    - DEFINE syspass=オラクルDBのシステムユーザのパスワード
 
-2. **設定ファイル/settings.sql**編集
+2. **インデックス情報取得/INDEX_STATS.bat**編集
+   - 第一パラメータ：YOUR_SCHEMA を対象のスキーマ名に修正
