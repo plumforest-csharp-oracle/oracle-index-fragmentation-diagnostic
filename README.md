@@ -32,12 +32,13 @@ Oracleインデックス断片化診断スクリプト。ANALYZE+INDEX_STATSでC
    - YOUR_INDEX_NAME を対象のインデックス名に変更
    - 複数INDEXを同時に実行することも可能
 
-↓4以降は、メンテナンス対象インデックスがあった時のみ  
+
 4. **②インデックス再構築/INDEX_REBUILD.bat**編集
+   - 4以降は、メンテナンス対象インデックスがあった時のみ
    - mnt/XXXXXXXX のユーザ名とパスワードを編集。※mntroleを付与しているユーザ名
    - 第一パラメータ：YOUR_SCHEMA を対象のスキーマ名に修正
 
-5. **②インデックス再構築/YOUR_INDEX_NAME.sql**編集
+6. **②インデックス再構築/YOUR_INDEX_NAME.sql**編集
    - YOUR_TABLE を対象のインデックスを保持するテーブル名に変更
    - YOUR_INDEX_NAME を対象のインデックス名に変更
    - YOUR_CULUMN を対象のインデックスに指定したテーブルのカラム名に変更
