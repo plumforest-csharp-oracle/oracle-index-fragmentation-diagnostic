@@ -20,6 +20,8 @@ DEFINE systemuser=XXXXXXXX
 DEFINE systempass=********
 
 ------ ▼対象ロール ------
+
+--  メンテナンスロール（CREATE ANY INDEX、DROP ANY INDEXなどを含む）
 DEFINE mntrole=XXXXXXXX
 DEFINE mntrole_pass=********
 
