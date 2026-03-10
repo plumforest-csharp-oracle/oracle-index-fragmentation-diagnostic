@@ -11,16 +11,17 @@ WHENEVER SQLERROR EXIT 1 ROLLBACK
 DEFINE targetuser=XXXXXXXX
 DEFINE targetuser_pass=********
 
------- ▲対象ユーザ ------
-
 --  SYS
 DEFINE sysuser=XXXXXXXX
 DEFINE syspass==********
 
-
 -- SYSTEM
 DEFINE systemuser=XXXXXXXX
 DEFINE systempass=********
+
+------ ▼対象ロール ------
+DEFINE mntrole=XXXXXXXX
+DEFINE mntrole_pass=********
 
 --日付＋時刻の文字列を定義
 conn &systemuser./&systempass.
